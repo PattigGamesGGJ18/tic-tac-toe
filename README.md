@@ -1,2 +1,2 @@
-# tic-tag-toe
+# tic-tac-toe
 Tic-Tac-Toe browser game
