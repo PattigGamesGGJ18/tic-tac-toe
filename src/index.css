@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 50px;
+  background: #fff;
+  color: #224;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+@media only screen and (max-device-width: 500px) {
+  #debug {
+    display: none;
+  }
+}
