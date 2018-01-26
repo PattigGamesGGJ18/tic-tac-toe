@@ -4,10 +4,8 @@
   "private": true,
   "dependencies": {
     "boardgame.io": "^0.16.7",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "^1.1.0",
-    "koa-static": "^4.0.1"
+    "koa-static": "^4.0.1",
+    "koa-helmet": "^3.2.0"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-watch --presets es2015,stage-2 src/server.js",
@@ -15,6 +13,9 @@
     "clear": "rm -rf dist"
   },
   "devDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "^1.1.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.0",
@@ -30,7 +31,6 @@
     "cross-env": "^5.1.1",
     "css-loader": "^0.28.7",
     "html-webpack-plugin": "^2.30.1",
-    "koa-helmet": "^3.2.0",
     "koa-webpack": "^1.0.0",
     "node-sass": "^4.7.2",
     "open-browser-webpack-plugin": "0.0.5",
