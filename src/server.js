@@ -1,10 +1,3 @@
-import path from 'path';
-
-import KoaStatic from 'koa-static';
-import KoaHelmet from 'koa-helmet';
-import KoaWebpack from 'koa-webpack';
-import WebpackConfig from './webpack.dev.js';
-
 import Server from 'boardgame.io/server';
 import TicTacToe from './games/tic-tac-toe/game';
 
@@ -15,6 +8,9 @@ const PROD = !DEV;
 const app = Server({ games: [TicTacToe] });
 
 if (DEV) {
+  const KoaWebpack = require('koa-webpack');
+  const WebpackConfig = require('../webpack.js');
+
   app.use(
     KoaWebpack({
       config: WebpackConfig,
@@ -23,7 +19,12 @@ if (DEV) {
 }
 
 if (PROD) {
-  app.use(KoaStatic(path.join(__dirname, 'dist')));
+  const path = require('path');
+
+  const KoaStatic = require('koa-static');
+  const KoaHelmet = require('koa-helmet');
+
+  app.use(KoaStatic(path.join(__dirname, 'public')));
   app.use(KoaHelmet());
 }
 

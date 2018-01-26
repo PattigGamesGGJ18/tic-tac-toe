@@ -4,7 +4,7 @@ import { Client } from 'boardgame.io/client';
 import TicTacToe from './games/tic-tac-toe/game';
 import TicTacToeBoard from './games/tic-tac-toe/board';
 
-import './App.css';
+import './App.scss';
 
 var App = Client({
     board: TicTacToeBoard,
