@@ -8,4 +8,4 @@ COPY package.json /app
 WORKDIR /app
 RUN npm install -g
 
-CMD ["node", "server.js"]
+CMD ["node", "server.jsx"]

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Client } from 'boardgame.io/client';
 
-import User from '../../user';
+import User from '../../user.jsx';
 
-import Game from './game';
-import Board from './board';
+import Game from './game.jsx';
+import Board from './board.jsx';
 
 var App = Client({
     board: Board,

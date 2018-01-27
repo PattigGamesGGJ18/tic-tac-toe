@@ -9,7 +9,7 @@ const port = process.env.PORT || 8000;
 const dev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: ['webpack-hot-middleware/client', path.resolve(__dirname, 'src/index.js')],
+  entry: ['webpack-hot-middleware/client', path.resolve(__dirname, 'src/index.jsx')],
 
   output: {
     publicPath: '/',

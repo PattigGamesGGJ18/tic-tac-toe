@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-watch --presets es2015,stage-2 src/server.js",
-    "build": "webpack --config webpack.js && ( cd src && babel --presets es2015,stage-2 --minified --source-root src --presets es2015,stage-2 server.js games/**/game.js -d ../dist )",
+    "build": "webpack --config webpack.js && ( cd src && babel --presets es2015,stage-2 --minified --source-root src --presets es2015,stage-2 server.js games/**/game.jsx -d ../dist )",
     "clear": "rm -rf dist"
   },
   "devDependencies": {

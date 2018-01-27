@@ -2,8 +2,8 @@ import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import { Client } from 'boardgame.io/client';
 
-import Login from './login';
-import TicTacToe from './games/tic-tac-toe/client';
+import Login from './login.jsx';
+import TicTacToe from './games/tic-tac-toe/client.jsx';
 
 import './app.scss';
 
