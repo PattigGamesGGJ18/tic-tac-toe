@@ -1,4 +1,4 @@
-import { Game } from 'boardgame.io/core';
+import { Game } from 'boardgame.io/dist/core';
 
 function IsVictory(cells) {
   const positions = [

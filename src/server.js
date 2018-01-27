@@ -1,4 +1,4 @@
-import Server from 'boardgame.io/server';
+import Server from 'boardgame.io/dist/server';
 import TicTacToe from './games/tic-tac-toe/game.jsx';
 
 const PORT = process.env.PORT || 8000;

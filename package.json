@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "boardgame.io": "^0.16.7",
-    "koa-static": "^4.0.1",
-    "koa-helmet": "^3.2.0"
+    "boardgame.io": "git+https://github.com/PattigGamesGGJ18/boardgame.io.git",
+    "koa-helmet": "^3.2.0",
+    "koa-static": "^4.0.1"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-watch --presets es2015,stage-2 src/server.js",
