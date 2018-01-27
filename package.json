@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "boardgame.io": "git+https://github.com/PattigGamesGGJ18/boardgame.io.git",
+    "boardgame.io": "file:../boardgame.io",
     "koa-helmet": "^3.2.0",
     "koa-static": "^4.0.1"
   },
