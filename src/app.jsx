@@ -1,11 +1,13 @@
 import React from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { SecureRoute, RouteGuard } from 'react-route-guard';
 import { Client } from 'boardgame.io/dist/client';
 
 import Login from './login.jsx';
 import TicTacToe from './games/tic-tac-toe/client.jsx';
 
 import './app.scss';
+import User from "./user.jsx";
 
 const routes = [
     {
@@ -20,19 +22,41 @@ const routes = [
     }
 ];
 
-const App = () => (
-  <Router>
-      <div className="content">
-        {routes.map((route, idx) => (
+const LoginRouteGuard = {
+  shouldRoute: () => {
+    console.log(User.name);
+    return !!User.name;
+  }
+};
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: false,
+    };
+  }
+
+
+  render() {
+    return (
+      <Router>
+        <div className="content">
+          <Switch>
           <Route
-            key={idx}
-            exact
-            path={route.path}
-            component={route.component}
-          />
-        ))}
-      </div>
-  </Router>
-);
+              exact path='/'
+              component={Login}
+            />
+          <SecureRoute
+              exact path='/tic-tac-toe'
+              component={TicTacToe}
+              routeGuard={LoginRouteGuard} redirectToPathWhenFail='/'
+            />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+}
 
 export default App;

@@ -25,10 +25,11 @@ class Login extends React.Component {
     }
 
     handleSubmit(event) {
-        console.log('Submitting...');
-        User.name = this.state.value;
-        this.props.history.push('/tic-tac-toe');
-        event.preventDefault();
+      User.loggedIn = true;
+      console.log('Submitting...');
+      User.name = this.state.value;
+      this.props.history.push('/tic-tac-toe');
+      event.preventDefault();
     }
 
     render() {
